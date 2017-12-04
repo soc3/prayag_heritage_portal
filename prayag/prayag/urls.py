@@ -20,17 +20,20 @@ from django.conf import settings
 from TourismPlaces.views import (
 		home, blogList, featuresTypoBasic, featuresTypoBlockquotes,
         featuresLabels, featuresProgessBars, results, layout, weather_results, 
-        weather_layout, temp_display, frame
+        weather_layout, temp_display, frame, contact, about, getimage,
+        blogsingle,
         )
  
 
 urlpatterns = [
+    url(r'^home/', home, name='home'),
     url(r'^sendWeatherRequest/(?P<query>[^/]+)', weather_results, name='weather_results'),
     url(r'^weather_layout/', weather_layout, name='weather_layout'),
     url(r'^sendRequest/(?P<query>[^/]+)', results, name='results'),
     url(r'^frame/', frame, name='frame'),
     url(r'^layout/', layout, name='layout'),
-    url(r'^home/', home, name='home'),
+    url(r'^places/', blogList, name='bloglist'),
+    url(r'^place_detail', blogsingle, name='blogsingle'), 
     url(r'^temp_display/', temp_display, name='temp_display'),	
     url(r'^bloglist', blogList, name='bloglist'),
     # url(r'^index_page', indexPage, name='index_page'),
@@ -39,6 +42,9 @@ urlpatterns = [
     url(r'^features_labels', featuresLabels, name='features_labels'),
     url(r'^features_progess_bars', featuresProgessBars, name='features_progress_bars'),
     url(r'^admin/', admin.site.urls),
+    url(r'^image/', getimage, name='getimage'),
+    url(r'^contact/', contact, name='contact'),
+    url(r'^about/', about, name='about'),
 ]
  
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

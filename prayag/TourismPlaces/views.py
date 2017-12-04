@@ -14,7 +14,18 @@ def home(request):
 	tourism_places = TourismPlace.objects.all()
 	#images = Image.objects.all()
 	return render(request, 'index.html', {'tourism_places':tourism_places})
- 
+
+def blogsingle(request):
+	return render(request, 'blog-single.html', {})  
+
+def contact(request):
+	return render(request, 'contact.html', {})
+
+def about(request):
+	return render(request, 'about.html', {})
+def getimage(request):
+	return render(request, 'image.html',{})
+
 def blogList(request):
 	return render(request, 'blog-list.html', {})
 	
