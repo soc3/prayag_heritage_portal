@@ -1,6 +1,6 @@
 Prayag Heritage Portal presents the major attractions in Prayag. There are some exclusive pctures available on places profile. Drone taken videos are awesome and surely attracts tourists. 
 
-For more please visit - http://prayagtourism.hohos.in
+For more please visit - http://prayagtourism.mnnit.ac.in
 
 
 Requirements?
